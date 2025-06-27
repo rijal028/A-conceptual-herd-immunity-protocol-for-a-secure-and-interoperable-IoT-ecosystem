@@ -14,7 +14,9 @@
     * [3.3. Lapisan 3: Deteksi Anomali Jaringan](#33-lapisan-3-deteksi-anomali-jaringan)
     * [3.4. Lapisan 4: Micro-segmentation Internal](#34-lapisan-4-micro-segmentation-internal)
 4.  [Studi Kasus: Skenario Serangan "Lampu Bohlam"](#4-studi-kasus-skenario-serangan-lampu-bohlam)
-5.  [Kesimpulan: Menuju Interoperabilitas yang Aman](#5-kesimpulan-menuju-interoperabilitas-yang-aman)
+5.  [Protokol Komunikasi Internal: PKAI sebagai Bahasa Universal](#5-protokol-komunikasi-internal-pkai-sebagai-bahasa-universal)
+6.  [Kesimpulan: Menuju Interoperabilitas yang Aman](#6-kesimpulan-menuju-interoperabilitas-yang-aman)
+
 
 ---
 
@@ -62,6 +64,10 @@ Ini adalah pertahanan terhadap gerakan lateral. Cerebrum memiliki sebuah **matri
     * Peretas mencoba menggunakan lampu untuk mengirim perintah "Buka Kunci" ke kunci pintu pintar. -> **Gagal.** Ditolak oleh **Lapisan 4 (Micro-segmentation)** karena lampu tidak punya hak akses ke kunci pintu.
 3.  **Hasil:** Serangan berhasil dibendung pada titik masuknya dan tidak bisa menyebar. Rumah tetap aman.
 
-### 5. Kesimpulan: Menuju Interoperabilitas yang Aman
+### 5. Protokol Komunikasi Internal: PKAI sebagai Bahasa Universal
+Untuk memastikan integritas semua komunikasi antar-perangkat di dalam ekosistem rumah pintar, sistem ini diamankan oleh sebuah protokol fondasi yang disebut **[Protokol Komunikasi Aman Internal (PKAI)](https://github.com/rijal028/Cognitive-Sentinel-Protocol/blob/main/PKAI_BLUEPRINT.md)**. PKAI berfungsi sebagai "bahasa sandi rahasia" universal. Setiap komunikasi, baik dari perangkat ke Cerebrum maupun sebaliknya, harus diautentikasi menggunakan token sesi yang spesifik dan berumur pendek, yang mencegah perangkat yang dibajak untuk bisa memberi perintah pada perangkat lain. Silakan lihat blueprint lengkapnya untuk detail teknisnya.
+
+
+### 6. Kesimpulan: Menuju Interoperabilitas yang Aman
 
 "Cerebrum" bukanlah solusi untuk menggantikan tanggung jawab keamanan pabrikan. Ia adalah sebuah **jembatan keamanan universal** yang memungkinkan ekosistem IoT yang beragam dan terbuka untuk bisa eksis secara aman. Ia memberikan ketenangan pikiran bagi pengguna dan menciptakan arena bermain yang adil bagi semua inovator di dunia rumah pintar.
