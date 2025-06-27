@@ -14,7 +14,8 @@
     * [3.3. Layer 3: Network Anomaly Detection](#33-layer-3-network-anomaly-detection)
     * [3.4. Layer 4: Internal Micro-segmentation](#34-layer-4-internal-micro-segmentation)
 4.  [Case Study: The "Smart Bulb" Attack Scenario](#4-case-study-the-smart-bulb-attack-scenario)
-5.  [Conclusion: Towards Secure Interoperability](#5-conclusion-towards-secure-interoperability)
+5.  [Internal Communication Protocol: PKAI as a Universal Language](#5-internal-communication-protocol-pkai-as-a-universal-language)
+6.  [Conclusion: Towards Secure Interoperability](#6-conclusion-towards-secure-interoperability)
 
 ---
 
@@ -62,6 +63,10 @@ This is the defense against lateral movement. Cerebrum maintains an internal **a
     * The hacker tries to use the bulb to send an "Unlock" command to the smart door lock. -> **FAILS.** Blocked by **Layer 4 (Micro-segmentation)** because the bulb has no access rights to the lock.
 3.  **Result:** The attack is contained at its entry point and cannot spread. The home remains secure.
 
-### 5. Conclusion: Towards Secure Interoperability
+### 5. Internal Communication Protocol: PKAI as a Universal Language
+To ensure the integrity of all inter-device communications within the smart home ecosystem, the system is secured by a foundational protocol called the **[Internal Secure Communication Protocol (PKAI)](https://github.com/rijal028/Cognitive-Sentinel-Protocol/blob/main/PKAI_BLUEPRINT.md)**. The PKAI acts as a universal "secret code language." Every communication, whether from a device to Cerebrum or vice versa, must be authenticated using a specific, short-lived session token. This is an implementation of micro-segmentation at the communication level, preventing a hijacked device from being able to "talk" to or command other devices on the network. Please see its full blueprint for technical details.
+
+
+### 6. Conclusion: Towards Secure Interoperability
 
 "Cerebrum" is not a solution to replace the manufacturer's security responsibilities. It is a **universal security bridge** that enables a diverse and open IoT ecosystem to exist safely. It provides peace of mind for users and creates a level playing field for all innovators in the smart home world.
